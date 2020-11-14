@@ -21,27 +21,27 @@ namespace Sample_50
              .AddJsonFile("appsettings.json")
              .Build();
 
-            var logger = new LoggerConfiguration()
+            Log.Logger = new LoggerConfiguration()
             .ReadFrom.Configuration(configuration)
             .CreateLogger();
 
-            Log.Logger = new LoggerConfiguration()
-                  .MinimumLevel.Debug()
-                  .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-                  .Enrich.FromLogContext()
-                  .WriteTo.Console()
-                  .WriteTo.File(
-                @"D:\logs\dot50_.log",
-                fileSizeLimitBytes: 1_000_000,
-                rollOnFileSizeLimit: true,
-                rollingInterval:RollingInterval.Hour,
-                shared: true,
-                flushToDiskInterval: TimeSpan.FromSeconds(1))
-                  //.WriteTo.Fluentd("127.0.0.1", 24224, "test2.xxxx")
-                  .CreateLogger(); 
+            //Log.Logger = new LoggerConfiguration()
+            //      .MinimumLevel.Debug()
+            //      .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+            //      .Enrich.FromLogContext()
+            //      .WriteTo.Console()
+            //      .WriteTo.File(
+            //    @"D:\logs\dot50_.log",
+            //    fileSizeLimitBytes: 1_000_000,
+            //    rollOnFileSizeLimit: true,
+            //    rollingInterval:RollingInterval.Hour,
+            //    shared: true,
+            //    flushToDiskInterval: TimeSpan.FromSeconds(1))
+            //      //.WriteTo.Fluentd("127.0.0.1", 24224, "test2.xxxx")
+            //      .CreateLogger(); 
             try
             {
-                logger.Information("기동");
+                Log.Information("기동");
                 await CreateHostBuilder(args).Build().RunAsync();
             }
             catch(Exception exc)

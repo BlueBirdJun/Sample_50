@@ -9,6 +9,9 @@
     <ProjectReference Include="..\Sample_50.Nuget\Sample_50.Nuget.csproj" />
     <ProjectReference Include="..\Sample_50.Persistance\Sample_50.Persistance.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Handler\" />
+  </ItemGroup>
 
    
 </Project>
