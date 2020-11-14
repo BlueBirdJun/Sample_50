@@ -11,11 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Filters\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Sample_50.Api1\Sample_50.Api1.csproj" />
     <ProjectReference Include="..\Sample_50.Api2\Sample_50.Api2.csproj" />
     <ProjectReference Include="..\Sample_50.Common\Sample_50.Common.csproj" />
