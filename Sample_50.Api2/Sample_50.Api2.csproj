@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sample_50.Application\Sample_50.Application.csproj" />
+    <ProjectReference Include="..\Sample_50.Common\Sample_50.Common.csproj" />
+    <ProjectReference Include="..\Sample_50.Nuget\Sample_50.Nuget.csproj" />
+    <ProjectReference Include="..\Sample_50.Persistance\Sample_50.Persistance.csproj" />
+  </ItemGroup>
+
+   
+</Project>
